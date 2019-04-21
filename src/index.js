@@ -1,3 +1,3 @@
-export Grid from './components/Grid';
-export Row, { getRowProps } from './components/Row';
-export Col, { getColumnProps } from './components/Col';
+export {default as Row} from './components/Row';
+export {default as Col} from './components/Col';
+export {default as Grid} from './components/Grid';
