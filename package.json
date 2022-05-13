@@ -71,7 +71,7 @@
     "webpack-merge": "^4.1.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run compile",
+    "build": "npx cross-env NODE_ENV=production npm run compile",
     "clean": "rimraf ./lib",
     "compile": "npm run compile:lib && npm run compile:dist",
     "compile:dist": "rm -rf dist && cross-env ./node_modules/.bin/webpack",
@@ -83,7 +83,8 @@
     "release": "bumped release",
     "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
     "test": "cross-env NODE_ENV=test karma start",
-    "test:watch": "cross-env NODE_ENV=test karma start --no-single-run"
+    "test:watch": "cross-env NODE_ENV=test karma start --no-single-run",
+    "install": "npm run build"
   },
   "license": "MIT",
   "peerDependencies": {
